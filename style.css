@@ -23,10 +23,25 @@ h1 {
     margin: 50px auto;
     position: relative;
 }
+p{
+    position: relative;
+    display: flex;
+    top: 50%; 
+    left: -100px;  
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(226, 32, 32);
+    font-size: 2em;
+    animation: slidep 10s ease-out both;
+    
+    /* transform: translateX(-100px); */
+}
 img {
     position: absolute;
     opacity: 0;   /*Todas as imagem começam com 0 de opacidade*/
     animation: slide 20s infinite;
+    
 
 }
 img:nth-of-type(1){       /*nth-of-type corresponde a um ou mais elementos de um dado tipo, baseado em sua posição entre um grupo de irmãos.*/
@@ -55,3 +70,13 @@ img:nth-of-type(4){
     }
 
 }
+
+@keyframes slidep{
+    0%, 15%{left: -100px;}
+
+    30%,50% {left: 200px;}
+    100%{left: 200px;
+    color: rgb(21, 255, 0);
+    opacity: 0;}
+}
+
